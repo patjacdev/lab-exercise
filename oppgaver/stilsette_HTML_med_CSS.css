@@ -1,0 +1,109 @@
+/* Global stil */
+* {
+/* Gjelder for alle elementer på siden */
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+
+/* PADDING FOR HOVEDSEKSJONER!!! */
+header,
+main,
+aside,
+footer {
+    padding: 2rem;
+}
+
+
+/* Header styling ;) */
+#global-header {
+  background-image: url("../ekstra/Tech.jpg"); /* bakgrunnsbilde */
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+
+  display: flex;
+  flex-direction: column;  /* logo øverst, nav nederst */
+  justify-content: space-between;
+}
+
+
+/* Logo styling (Skriften)*/
+#mainlogo {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase; /* store bokstaver */
+  color: white;
+}
+
+
+/* Navigasjon */
+#global-header nav {
+  background-color: rgb(255, 255, 255)white;
+  border: 1px solid rgb(0, 103, 69);
+}
+
+#global-header nav ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+#global-header nav li {
+  flex: 1; /* gjør lenkene jevnt fordelt */
+}
+
+#global-header nav a {
+  display: block;      /* lenker blir blokker */
+  padding: 1rem;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+
+/* ______________________________________________ */
+
+
+/* Her er de vanligste knappene */
+.btn {
+    background-color: rgb(0, 103, 69);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* Google knappen :D */
+.google-btn {
+    background-color: rgb(0, 103, 69);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+/* ______________________________________________ */
+
+/* Footer */
+footer {
+    background-color: rgb(0, 103, 69);
+    color: white;
+    padding: 2rem;
+}
+
