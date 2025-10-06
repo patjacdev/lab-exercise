@@ -56,11 +56,6 @@ footer {
   display: flex;
 }
 
-nav a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-}
-
 #global-header nav li {
   flex: 1; /* gjør lenkene jevnt fordelt */
 }
@@ -73,6 +68,13 @@ nav a {
   text-align: center;
 }
 
+article {
+  border: 1px solid rgb(0, 103, 69);
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
 
 /* ______________________________________________ */
 
@@ -97,6 +99,40 @@ nav a {
     display: inline-block;
 }
 
+/* Generell knappestil */
+.btn {
+  display: inline-block;          /* gjør at vi kan bestemme størrelse */
+  background-color: rgb(0, 103, 69);
+  color: white;
+  padding: 0.75rem 1.5rem;        /* gir luftig knapp */
+  text-decoration: none;          /* fjerner understrek på lenker */
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(0, 80, 55);
+}
+
+/* Google-knappen */
+.google-btn {
+  display: inline-block;
+  background-color: #db4437;      /* Googlerød */
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.google-btn:hover {
+  background-color: #a33228;
+}
+
 
 /* ______________________________________________ */
 
@@ -104,6 +140,61 @@ nav a {
 footer {
     background-color: rgb(0, 103, 69);
     color: white;
-    padding: 2rem;
 }
 
+/* Skjema i footer */
+footer form {
+  margin-top: 1rem;
+}
+
+footer label {
+  display: block; /* Hver lavel vises på egen linje */
+  margin-top: 0.5rem;
+}
+
+footer input,
+footer textarea {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Send knappen */
+footer button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background-color: rgb(0, 80, 55);
+}
+
+
+
+
+
+/* Side kolonne */
+
+aside {
+  padding: 1rem;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgb(0, 103, 69);
+  margin: 1rem 0;
+}
+
+/* Lenker i sidekolonna */
+
+aside a {
+  color:rgb(255, 255, 255);
+  text-decoration: none; /* Vanlig stil til lenker*/
+}
