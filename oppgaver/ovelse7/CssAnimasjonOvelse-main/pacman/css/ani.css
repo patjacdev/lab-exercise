@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+}
+
+main {
+  height: 600px;
+  width: 900px;
+  border: 11px double blue;
+  margin: 0 auto;
+  position: relative;
+}
+
+#left div,
+#right div {
+  border: 11px double blue;
+  position: absolute;
+}
+
+/* Venstre side dekorasjoner */
+#left .corner-top {
+  top: 55px;
+  left: 226px;
+  height: 150px;
+  width: 30px;
+}
+
+#left .corner-bottom {
+  bottom: 55px;
+  left: 226px;
+  height: 150px;
+  width: 30px;
+}
+
+#left .small {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+}
+
+#left .one {
+  top: 202px;
+  left: 107px;
+}
+
+#left .two {
+  bottom: 202px;
+  left: 107px;
+}
+
+/* Høyre side dekorasjoner */
+#right .corner-top {
+  right: 226px;
+  top: 55px;
+  height: 150px;
+  width: 30px;
+}
+
+#right .corner-bottom {
+  right: 226px;
+  bottom: 55px;
+  height: 150px;
+  width: 30px;
+}
+
+#right .small {
+  width: 100px;
+  height: 30px;
+  position: absolute;
+}
+
+#right .one {
+  top: 202px;
+  right: 107px;
+}
+
+#right .two {
+  bottom: 202px;
+  right: 107px;
+}
+
+/* Midtre stolpe */
+#middel {
+  position: absolute;
+  border: 11px double blue;
+  width: 30px;
+  top: 55px;
+  left: 420px;
+  height: 470px;
+}
+
+/* Small-elementer får bredde på 150px */
+.small {
+  width: 150px !important;
+}
+
+/* Liv-liste (hjerter) */
+#life {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.fa-heart {
+  color: red;
+  font-size: 30px;
+}
+
+/* Spøkelset */
+.fa-ghost {
+  font-size: 30px;
+  color: #ffdb1a;
+  position: absolute;
+  top: 282px;
+  left: 20px;
+  animation:
+    ghostMove 12s linear infinite alternate forwards,
+    ghostColor 6s ease-in-out infinite alternate;
+}
+
+#pacman {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 282px;
+  left: 20px;
+  background-color: #ffdb1a;  /* Pac-Man gul */
+  border-radius: 50%;
+  clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%, 0% 0%);
+  animation:
+    pacmanMove 12s linear infinite alternate forwards 0.8s,  /* 0.8s delay */
+    pacmanMouth 0.4s ease-in-out infinite alternate;
+}
+
+/* Pac-Man beveger seg på samme bane som spøkelse, med forsinkelse */
+@keyframes pacmanMove {
+  0%   { left: 20px; top: 282px; }
+  10%  { left: 329px; top: 282px; }
+  20%  { left: 329px; top: 12px; }
+  30%  { left: 521px; top: 12px; }
+  40%  { left: 521px; top: 282px; }
+  50%  { left: 820px; top: 282px; }
+  60%  { left: 820px; top: 538px; }
+  70%  { left: 327px; top: 538px; }
+  80%  { left: 327px; top: 282px; }
+  90%  { left: 20px; top: 282px; }
+  100% { left: 327px; top: 282px; }
+}
+
+/* Animasjon som åpner og lukker Pac-Mans munn */
+@keyframes pacmanMouth {
+  0% {
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%, 0% 0%);
+  }
+}
+
+/* Animasjon som åpner og lukker Pac-Mans munn */
+@keyframes pacmanMouth {
+  0% {
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%);
+  }
+  100% {
+    clip-path: polygon(0% 0%, 100% 25%, 100% 75%, 0% 100%, 0% 0%);
+  }
+}
+
+/* Bevegelsesbane for spøkelset */
+@keyframes ghostMove {
+  0% {
+    left: 20px;
+    top: 282px;
+  }
+  10% {
+    left: 329px;
+    top: 282px;
+  }
+  20% {
+    left: 329px;
+    top: 12px;
+  }
+  30% {
+    left: 521px;
+    top: 12px;
+  }
+  40% {
+    left: 521px;
+    top: 282px;
+  }
+  50% {
+    left: 820px;
+    top: 282px;
+  }
+  60% {
+    left: 820px;
+    top: 538px;
+  }
+  70% {
+    left: 327px;
+    top: 538px;
+  }
+  80% {
+    left: 327px;
+    top: 282px;
+  }
+  90% {
+    left: 20px;
+    top: 282px;
+  }
+  100% {
+    left: 327px;
+    top: 282px;
+  }
+}
+
+/* Fargeanimasjon for spøkelset */
+@keyframes ghostColor {
+  0%, 100% {
+    color: #ffdb1a;
+  }
+  50% {
+    color: #ff0000;
+  }
+}
+
+  /* Husk:
+     – Legg animasjonen på .fa-ghost (name, duration, iteration-count, direction, timing-function, fill-mode).
+     – Fargeanimasjonen (ani-color) lages som egen @keyframes og kan kjøres parallelt. */
+  
+/*BONUS*/
+/*Få pacman til å jage, eller gå i en rute som går i mot ghost*/
+/*#pacman{
+
+    background-image: url('../img/eat.png');
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    transform: rotate(30deg);
+    animation-name: .....;
+    animation-duration: 0.4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+..... pacman{
+    from{
+        background-image: url('../img/eat.png');
+    }
+    to{
+        background-image: url('../img/close.png');
+    }
+}*/
